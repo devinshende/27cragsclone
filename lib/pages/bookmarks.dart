@@ -15,7 +15,6 @@ class BookmarksPage extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 10.0),
           child: Center(
             child: ListView(
-              // padding: const EdgeInsets.all(8),
               children: <Widget>[
                 AreaBar("Rodellar - Mascun", 1300,
                     'https://stock.patitucciphoto.com/img-get/I0000lcGtYRsNFBc/s/885/750/15CL0216.jpg'),
@@ -25,6 +24,8 @@ class BookmarksPage extends StatelessWidget {
                     'https://awe365.com/wp-content/uploads/2020/04/Helga-Rodellar-rockbusters.net_.jpg'),
                 AreaBar("Margalef", 1300,
                     'https://gripped.com/wp-content/uploads/2015/03/ml.jpg'),
+                AreaBar("Oliana", 1700,
+                    'https://www.planetmountain.com/img/1/70275.jpg'),
               ],
             ),
           ),
