@@ -46,13 +46,7 @@ class AreaBar extends StatelessWidget {
     return Card(
       child: Row(
         children: [
-          SizedBox(
-            height: 160,
-            child: FittedBox(
-              child: Image.network(url),
-              fit: BoxFit.fill,
-            ),
-          ),
+          Image.network(url, width: 180),
           Expanded(
             child: Container(
               color: Colors.white,
