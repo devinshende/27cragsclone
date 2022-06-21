@@ -14,21 +14,17 @@ class BookmarksPage extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 10.0),
           child: Center(
-            child: Column(
+            child: ListView(
               // padding: const EdgeInsets.all(8),
               children: <Widget>[
                 AreaBar("Rodellar - Mascun", 1300,
                     'https://stock.patitucciphoto.com/img-get/I0000lcGtYRsNFBc/s/885/750/15CL0216.jpg'),
-                SizedBox(height: 15),
                 AreaBar("Terradets", 220,
                     'https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/6/6d/66d15cc2-c7e4-11eb-be9f-07dc2475fe9b/60bea5bc7a6c2.image.jpg?resize=1396%2C1002'),
-                SizedBox(height: 15),
                 AreaBar("Siurana", 2500,
                     'https://awe365.com/wp-content/uploads/2020/04/Helga-Rodellar-rockbusters.net_.jpg'),
-                SizedBox(height: 15),
                 AreaBar("Margalef", 1300,
                     'https://gripped.com/wp-content/uploads/2015/03/ml.jpg'),
-                SizedBox(height: 15),
               ],
             ),
           ),
@@ -47,13 +43,15 @@ class AreaBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 200,
+    return Card(
       child: Row(
         children: [
-          FittedBox(
-            child: Image.network(url),
-            fit: BoxFit.fill,
+          SizedBox(
+            height: 160,
+            child: FittedBox(
+              child: Image.network(url),
+              fit: BoxFit.fill,
+            ),
           ),
           Expanded(
             child: Container(
@@ -75,6 +73,26 @@ class AreaBar extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class AreaListTile extends StatelessWidget {
+  AreaListTile(this.name);
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: Image.network(
+            "https://stock.patitucciphoto.com/img-get/I0000lcGtYRsNFBc/s/885/750/15CL0216.jpg"),
+        title: Text(name),
+        subtitle:
+            Text('A sufficiently long subtitle warrants three lines.\nhi'),
+        isThreeLine: true,
       ),
     );
   }
