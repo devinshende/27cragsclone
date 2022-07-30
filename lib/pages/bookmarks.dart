@@ -6,10 +6,10 @@ class BookmarksPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black54,
+        backgroundColor: Colors.green,
         title: Text("Bookmarks", style: headerText),
       ),
-      backgroundColor: Colors.black12,
+      // backgroundColor: Colors.,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 10.0),
